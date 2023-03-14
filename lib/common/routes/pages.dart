@@ -5,7 +5,10 @@ import 'package:get/get.dart';
 
 import '../../pages/signin/index.dart';
 import '../../pages/welcome/index.dart';
+import '../../pages/application/index.dart';
 
+
+import '../middlewares/router_welcome.dart';
 import 'routes.dart';
 
 class AppPages {
@@ -19,9 +22,9 @@ class AppPages {
       name: AppRoutes.INITIAL,
       page: () => const WelcomePage(),
       binding: WelcomeBinding(),
-      // middlewares: [
-      //   RouteWelcomeMiddleware(priority: 1),
-      // ],
+      middlewares: [
+        RouteWelcomeMiddleware(priority: 1),
+      ],
     ),
     
     GetPage(
@@ -29,16 +32,16 @@ class AppPages {
       page: () => SignInPage(),
       binding: SignInBinding(),
     ),
-/*
     // check if needed to login or not
     GetPage(
       name: AppRoutes.Application,
       page: () => ApplicationPage(),
       binding: ApplicationBinding(),
-      middlewares: [
-        RouteAuthMiddleware(priority: 1),
-      ],
+      // middlewares: [
+      //   RouteAuthMiddleware(priority: 1),
+      // ],
     ),
+/*
 
     // 最新路由
     // 首页
