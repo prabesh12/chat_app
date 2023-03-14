@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
 import '../../pages/contact/index.dart';
 import '../../pages/signin/index.dart';
 import '../../pages/welcome/index.dart';
 import '../../pages/application/index.dart';
-
+import '../../pages/chat/index.dart';
 import '../middlewares/router_welcome.dart';
 import 'routes.dart';
 
@@ -27,7 +26,7 @@ class AppPages {
 
     GetPage(
       name: AppRoutes.SIGN_IN,
-      page: () =>const SignInPage(),
+      page: () => const SignInPage(),
       binding: SignInBinding(),
     ),
     // check if needed to login or not
@@ -44,14 +43,14 @@ class AppPages {
         name: AppRoutes.Contact,
         page: () => ContactPage(),
         binding: ContactBinding()),
-/*
 
-    GetPage(name: AppRoutes.Message, page: () => MessagePage(), binding: MessageBinding()),
-    //我的
-    GetPage(name: AppRoutes.Me, page: () => MePage(), binding: MeBinding()),
-    //聊天详情
-    GetPage(name: AppRoutes.Chat, page: () => ChatPage(), binding: ChatBinding()),
+    // GetPage(name: AppRoutes.Message, page: () => MessagePage(), binding: MessageBinding()),
+    // //我的
+    // GetPage(name: AppRoutes.Me, page: () => MePage(), binding: MeBinding()),
+    //chat page
+    GetPage(
+        name: AppRoutes.Chat, page: () => ChatPage(), binding: ChatBinding()),
 
-    GetPage(name: AppRoutes.Photoimgview, page: () => PhotoImgViewPage(), binding: PhotoImgViewBinding()),*/
+    // GetPage(name: AppRoutes.Photoimgview, page: () => PhotoImgViewPage(), binding: PhotoImgViewBinding()),*/
   ];
 }
