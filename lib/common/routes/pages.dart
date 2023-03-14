@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
-// import 'package:firebase_chat/common/middlewares/middlewares.dart';
-
 import 'package:get/get.dart';
 
+import '../../pages/contact/index.dart';
 import '../../pages/signin/index.dart';
 import '../../pages/welcome/index.dart';
 import '../../pages/application/index.dart';
-
 
 import '../middlewares/router_welcome.dart';
 import 'routes.dart';
@@ -26,10 +24,10 @@ class AppPages {
         RouteWelcomeMiddleware(priority: 1),
       ],
     ),
-    
+
     GetPage(
       name: AppRoutes.SIGN_IN,
-      page: () => SignInPage(),
+      page: () =>const SignInPage(),
       binding: SignInBinding(),
     ),
     // check if needed to login or not
@@ -41,12 +39,13 @@ class AppPages {
       //   RouteAuthMiddleware(priority: 1),
       // ],
     ),
+
+    GetPage(
+        name: AppRoutes.Contact,
+        page: () => ContactPage(),
+        binding: ContactBinding()),
 /*
 
-    // 最新路由
-    // 首页
-    GetPage(name: AppRoutes.Contact, page: () => ContactPage(), binding: ContactBinding()),
-    //消息
     GetPage(name: AppRoutes.Message, page: () => MessagePage(), binding: MessageBinding()),
     //我的
     GetPage(name: AppRoutes.Me, page: () => MePage(), binding: MeBinding()),

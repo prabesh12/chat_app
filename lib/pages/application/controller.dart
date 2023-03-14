@@ -35,7 +35,7 @@ class ApplicationController extends GetxController {
             color: AppColors.secondaryElementText,
           )),
           const BottomNavigationBarItem(
-        label: "Chat",
+        label: "Contact",
         backgroundColor: AppColors.primaryBackground,
           icon: Icon(
             Icons.contact_page,
@@ -46,7 +46,7 @@ class ApplicationController extends GetxController {
             color: AppColors.secondaryElementText,
           )),
           const BottomNavigationBarItem(
-        label: "Chat",
+        label: "Profile",
         backgroundColor: AppColors.primaryBackground,
           icon: Icon(
             Icons.person,
