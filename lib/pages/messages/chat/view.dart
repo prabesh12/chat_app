@@ -1,4 +1,5 @@
 import 'package:firebase_chat/common/values/colors.dart';
+import 'package:firebase_chat/pages/messages/chat/widgets/chat_list.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:cached_network_image/cached_network_image.dart';
@@ -99,6 +100,32 @@ class ChatPage extends GetView<ChatController> {
     );
   }
 
+
+void _showPicker(context){
+    showModalBottomSheet(context: context, builder: (BuildContext buildContext){
+      return SafeArea(child: Wrap(children: [
+        ListTile(
+          leading:const Icon(Icons.photo_library),
+          title: const Text("Gallery"),
+          onTap: (){
+                 controller.imgFromGallery();
+                 Get.back();
+          },),
+          ListTile(
+          leading:const Icon(Icons.photo_camera),
+          title: const Text("Camera"),
+          onTap: (){
+
+          },),
+          ListTile(
+          leading:const Icon(Icons.video_camera_back),
+          title: const Text("Video"),
+          onTap: (){
+
+          },)
+      ],));
+    });
+}
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -107,6 +134,7 @@ class ChatPage extends GetView<ChatController> {
             child: ConstrainedBox(
           constraints: BoxConstraints.expand(),
           child: Stack(children: [
+            ChatList(),
             Positioned(
                 bottom: 0.h,
                 height: 50.h,
@@ -135,7 +163,9 @@ class ChatPage extends GetView<ChatController> {
                         width: 30.w,
                         margin: EdgeInsets.only(left: 5.w),
                         child: GestureDetector(
-                          onTap: (){},
+                          onTap: (){
+                               _showPicker(context);
+                          },
                           child: Icon(
                             Icons.photo_outlined,
                             size: 35.w,

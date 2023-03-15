@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../pages/contact/index.dart';
+import '../../pages/messages/chat/index.dart';
 import '../../pages/signin/index.dart';
 import '../../pages/welcome/index.dart';
 import '../../pages/application/index.dart';
-import '../../pages/chat/index.dart';
 import '../middlewares/router_welcome.dart';
 import 'routes.dart';
 
