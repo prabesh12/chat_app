@@ -4,9 +4,9 @@ import 'package:firebase_chat/common/store/store.dart';
 
 import 'package:get/get.dart';
 
-/// 检查是否登录
+/// Check if you are logged in
 class RouteAuthMiddleware extends GetMiddleware {
-  // priority 数字小优先级高
+  // priority Small numbers have high priority
   @override
   int? priority = 0;
 

@@ -45,7 +45,7 @@ class AppPages {
         binding: ContactBinding()),
 
     // GetPage(name: AppRoutes.Message, page: () => MessagePage(), binding: MessageBinding()),
-    // //我的
+    // //profile
     // GetPage(name: AppRoutes.Me, page: () => MePage(), binding: MeBinding()),
     //chat page
     GetPage(

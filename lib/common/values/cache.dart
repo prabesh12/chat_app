@@ -1,8 +1,8 @@
-// 是否启用缓存
+// Whether to enable caching
 const CACHE_ENABLE = false;
 
-// 缓存的最长时间，单位（秒）
+// The maximum time of caching, unit (seconds)
 const CACHE_MAXAGE = 1000;
 
-// 最大缓存数
+// Maximum number of caches
 const CACHE_MAXCOUNT = 100;
